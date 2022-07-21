@@ -134,7 +134,7 @@ async def imdb_search(client, message):
         r, title = message.text.split(None, 1)
         movies = await get_poster(title, bulk=True)
         if not movies:
-            return await message.reply("No results Found")
+            return await message.reply("MESSAGE @m4mastermindmayank")
         btn = [
             [
                 InlineKeyboardButton(
@@ -162,7 +162,7 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
             [
                 InlineKeyboardButton(
                     text=f"Projects Channel",
-                    url="https://t.me/josprojects"
+                    url="https://t.me/mastermindmayankproject"
                 )
             ],
         ]
