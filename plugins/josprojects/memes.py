@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 
-# AESTHETIC------------ https://telegram.me/Josprojects ------------ #
+# AESTHETIC------------ https://telegram.me/mastermindmayankproject ------------ #
 
 def aesthetify(string):
     PRINTABLE_ASCII = range(0x21, 0x7f)
@@ -21,7 +21,7 @@ async def aesthetic(client, message):
     text = "".join(aesthetify(text))
     await status_message.edit(text)
 
-# DART------------ https://telegram.me/Josprojects ------------ #
+# DART------------ https://telegram.me/mastermindmayankproject ------------ #
 
 # EMOJI CONSTANTS
 DART_E_MOJI = "🎯"
@@ -43,7 +43,7 @@ async def throw_dart(client, message):
         reply_to_message_id=rep_mesg_id
     )
 
-# DICE------------ https://telegram.me/Josprojects ------------ #
+# DICE------------ https://telegram.me/mastermindmayankproject ------------ #
 
 # EMOJI CONSTANTS
 DICE_E_MOJI = "🎲"
@@ -65,7 +65,7 @@ async def roll_dice(client, message):
         reply_to_message_id=rep_mesg_id
     )
 
-# LUCK------------ https://telegram.me/Josprojects ------------ #
+# LUCK------------ https://telegram.me/mastermindmayankproject ------------ #
 
 # EMOJI CONSTANTS
 TRY_YOUR_LUCK = "🎰"
@@ -86,7 +86,7 @@ async def luck_cownd(client, message):
         reply_to_message_id=rep_mesg_id
     )
 
-# GOAL------------ https://telegram.me/Josprojects ------------ #
+# GOAL------------ https://telegram.me/mastermindmayankproject ------------ #
 
 # EMOJI CONSTANTS
 GOAL_E_MOJI = "⚽"
@@ -107,7 +107,7 @@ async def roll_dice(client, message):
         reply_to_message_id=rep_mesg_id
     )
 
-# RUNS------------ https://telegram.me/Josprojects ------------ #
+# RUNS------------ https://telegram.me/mastermindmayankproject ------------ #
 
 import random
 
@@ -138,7 +138,7 @@ RUN_STRINGS = (
     "Uppukam's English Salt Mongo Tree .....",
     "Children ..",
     "Your father to Paul ....",
-    "Car Engine Out Completely .....",
+    "Join @mastermindmayankproject for more",
     "This is the eye or magnety ...",
     "Before falling in the 4th pegging, I will arrive there.",
     "The drunk rains and wast ...."
