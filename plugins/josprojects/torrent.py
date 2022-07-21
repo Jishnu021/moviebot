@@ -25,7 +25,7 @@ async def torrent(_, message):
         await message.reply_text("`/torrent <Movie Name>`")
         return
     query = message.text.split(None, 1)[1].replace(" ", "%20")
-    m = await message.reply_text("Searching\nThis might take a while")
+    m = await message.reply_text("Searching\nJoin @mastermindmayankproject for more")
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(f"https://itor.api-zero.workers.dev/?name={query}") \
