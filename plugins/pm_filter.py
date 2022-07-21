@@ -116,8 +116,8 @@ async def next_page(bot, query):
             )
     btn.insert(0,
             [
-                InlineKeyboardButton("⭕️ Movie", url="https://t.me/+26XbUS8O3cM1MDU1"),
-                InlineKeyboardButton("Series ⭕️", url="https://t.me/+VWYQKLaIim4yNjk1")
+                InlineKeyboardButton("⭕️ Movie", url="https://t.me/+kM7dpYrZWftjNWM1"),
+                InlineKeyboardButton("Series ⭕️", url="https://t.me/+3LZhHBzPIGhjYTZl")
             ])
 
     btn.insert(0, [
@@ -153,7 +153,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('MESSAGE @m4mastermindmayank TO ADD THIS FILE')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -179,20 +179,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('Piracy Is Crime')
+                    return await query.answer('Join @mastermindmayankproject for more')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('Piracy Is Crime')
+                return await query.answer('Join @mastermindmayankproject for more')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('Join @mastermindmayankproject for more')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
@@ -246,7 +246,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode="md"
         )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Join @mastermindmayankproject for more')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -266,8 +266,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 parse_mode="md"
             )
         else:
-            await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('Piracy Is Crime')
+            await query.message.edit_text('ERROR !! MESSAGE @m4mastermindmayank', parse_mode="md")
+        return await query.answer('Join @mastermindmayankproject for more')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -290,7 +290,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Join @mastermindmayankproject for more')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -308,7 +308,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Join @mastermindmayankproject for more')
     elif query.data == "backcb":
         await query.answer()
 
@@ -364,7 +364,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 show_alert=True)
 
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('MESSAGE @m4mastermindmayank TO ADD THIS FILE')
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -382,11 +382,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
         buttons = [
             [
-                InlineKeyboardButton('⭕️ Support', url='https://t.me/JOSPSupport'),
-                InlineKeyboardButton('Channel ⭕️', url='https://t.me/JosProjects')
+                InlineKeyboardButton('⭕️ Support', url='https://t.me/teammastermindmayank'),
+                InlineKeyboardButton('Channel ⭕️', url='https://t.me/mastermindmayankproject')
             ],
             [
-                InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+                InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+2a_B8ZjwuRc5NGJl')
             ]
             ]
 
@@ -407,7 +407,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=False)
         except UserIsBlocked:
-            await query.answer('Unblock the bot mahn !', show_alert=True)
+            await query.answer('START THE BOT IN PM', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
@@ -419,7 +419,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('MESSAGE @m4mastermindmayank TO ADD THIS FILE')
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -436,11 +436,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         buttons = [
             [
-                InlineKeyboardButton('⭕️ Support', url='https://t.me/JOSPSupport'),
-                InlineKeyboardButton('Channel ⭕️', url='https://t.me/JosProjects')
+                InlineKeyboardButton('⭕️ Support', url='https://t.me/teammastermindmayank'),
+                InlineKeyboardButton('Channel ⭕️', url='https://t.me/mastermindmayankproject')
             ],
             [
-                InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+                InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+2a_B8ZjwuRc5NGJl')
             ]
             ]
         await query.answer()
@@ -462,8 +462,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('🕵️ Search here Movie 🕵️', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('⭕️ Updates', url='https://t.me/josprojects'),
-            InlineKeyboardButton('Movie Club ⭕️', url='https://t.me/+y53tWFUw6Q43NzE9')
+            InlineKeyboardButton('⭕️ Updates', url='https://t.me/mastermindmayankproject'),
+            InlineKeyboardButton('Movie Club ⭕️', url='https://t.me/+2a_B8ZjwuRc5NGJl')
             ],[
             InlineKeyboardButton('❌ Close the Menu ❌', callback_data='close_data')
         ]]
@@ -474,7 +474,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
+        await query.answer('Join @mastermindmayankproject for more')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Connect', callback_data='coct'),
@@ -503,7 +503,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('Zombies', callback_data='zombies'),
             InlineKeyboardButton('« Back', callback_data='start'),
-            InlineKeyboardButton('Adult Bot 🔞', url='https://t.me/AdultSearchXBot')
+            InlineKeyboardButton('Adult Bot 🔞', url='https://t.me/Premiumsecretsbot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -513,7 +513,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('⭕ Status', url='https://t.me/josprojects/221'),
+            InlineKeyboardButton('⭕ Status', url='https://t.me/mastermindmayank_bots/10'),
             InlineKeyboardButton('Source 🪤', callback_data='source')
             ],[
             InlineKeyboardButton('❓ How to Use ❓', callback_data='help')
@@ -826,7 +826,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('Join @mastermindmayankproject for more')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
@@ -873,7 +873,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Piracy Is Crime')
+    await query.answer('Join @mastermindmayankproject for more')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -938,11 +938,11 @@ async def auto_filter(client, msg, spoll=False):
         )
 
     btn.insert(0, [
-        InlineKeyboardButton("⭕️ Movie", url="https://t.me/+26XbUS8O3cM1MDU1"),
-        InlineKeyboardButton("Series ⭕️", url="https://t.me/+VWYQKLaIim4yNjk1")
+        InlineKeyboardButton("⭕️ Movie", url="https://t.me/+kM7dpYrZWftjNWM1"),
+        InlineKeyboardButton("Series ⭕️", url="https://t.me/+3LZhHBzPIGhjYTZl")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("⭕️ Join Our Channel ⭕️",url="https://t.me/imdbprobots/4")
+        InlineKeyboardButton("⭕️ Join Our Channel ⭕️",url="https://t.me/mastermindmayankproject")
     ])
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
@@ -980,7 +980,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/+q9NMdy0rY10zZWZl'>© IMDb (Series & Movies) Studio</a></b>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 10 hours to avoid copyright issues.</s>"
+        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/+2a_B8ZjwuRc5NGJl'>© Join @mastermindmayankproject for more</a></b>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 10 hours to avoid copyright issues.</s>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
@@ -996,12 +996,12 @@ async def auto_filter(client, msg, spoll=False):
             await message.delete()
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_photo(photo="https://telegra.ph/file/82b5bbbab6d5e5593b6b2.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_photo(photo="https://te.legra.ph/file/5c9844dfe9a8a1acd8bc0.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(36000)
             await fek.delete()
             await msg.delete()
     else:
-        fuk = await message.reply_photo(photo="https://telegra.ph/file/8b42f6caf6ef5fd76766f.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_photo(photo="https://te.legra.ph/file/5c9844dfe9a8a1acd8bc0.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(36000)
         await fuk.delete()
         await msg.delete()
@@ -1019,7 +1019,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("MESSAGE @m4mastermindmayank TO ADD THIS FILE")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -1056,7 +1056,7 @@ async def advantage_spell_chok(msg):
            InlineKeyboardButton("⭕️ IMDb", url=f"https://www.imdb.com/find?q={search}"),
            InlineKeyboardButton("Wikipedia ⭕️", url=f"https://en.m.wikipedia.org/w/index.php?search={search}")
         ]])
-        k = await msg.reply(f"Hey, Your word <b>{search}</b> is No Movie/Series Related to the Given Word Was Found 🥺\n\n<s>Please Go to Google and Confirm the Correct Spelling 🥺🙏</s>", reply_markup=button)
+        k = await msg.reply(f"Hey, Your word <b>{search}</b> is No Movie/Series Related to the Given Word Was Found 🥺\n\n<s>Please Go to Google and Confirm the Correct Spelling OR MESSAGE @m4mastermindmayank TO ADD THIS FILE 🥺🙏</s>", reply_markup=button)
         await asyncio.sleep(60)
         await k.delete()
         return
@@ -1068,7 +1068,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    m = await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    m = await msg.reply("MESSAGE @m4mastermindmayank TO ADD THIS FILE OR CHECK SPELLING",
                     reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(20)
     await m.delete()
