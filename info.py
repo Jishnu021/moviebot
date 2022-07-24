@@ -45,7 +45,13 @@ IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<code>{file_name}</code>\n\n<b>Size:</b> {file_size}\n\n<b> Join @mastermindmayankproject [for more Movies AND SERIES](https://t.me/+2a_B8ZjwuRc5NGJl)</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🎬 Title:</b> <a href={url}>{title}</a> [{year}] —<b>{kind}</b>\n\n<b>📆 Release:</b> <a href={url}/releaseinfo>{release_date}</a>\n<b>🌟 Rating:</b> <a href={url}/ratings>{rating} / 10</a>\n(based on <code>{votes}</code> user ratings.)\n\n<b>🎭 Genres:</b> #{genres}\n<b>📀 Runtime:</b> <code>{runtime} minutes</code>\n\n<b>☀️ Languages:</b> #{languages}\n<b>🌎 Country of Origin:</b> #{countries}\n<b>🎥 Director:</b> {director}\n\n<b><a href='https://t.me/+2a_B8ZjwuRc5NGJl'>© Join @mastermindmayankproject for more</a></b>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 10 hours to avoid copyright issues.</s>")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🎬 Title:</b> <a href={url}>{title}</a> [{year}] —<b>{kind}</b>\n\n<b>📆 Release:</b> <a href={url}/releaseinfo>{release_date}</a>\n<b>🌟 Rating:</b> <a href={url}/ratings>{rating} / 10</a>\n(based on <code>{votes}</code> user ratings.)\n\n<b>🎭 Genres:</b> #{genres}\n<b>📀 Runtime:</b> <code>{runtime} minutes</code>\n\n<b>☀️ Languages:</b> #{languages}\n<b>🌎 Country of Origin:</b> #{countries}\n<b>🎥 Director:</b> {director}\n\n<b><a href='https://t.me/+2a_B8ZjwuRc5NGJl'>© Join @mastermindmayankproject for more</a></b>\n\n<b>✍️ Note:</b> <s>📤ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ സിനിമ ലോകം 🔥📌📌📌📽🎬🅰️🅰️🅰️💯
+
+         ⚠️𝐑𝐄𝐀𝐃 𝐓𝐇𝐈𝐒⚠️
+
+💥ᴘʀᴏ ᴛɪᴘs  : If you don't see the files of the movie you asked for look at next page & 😅Don't Look At The Poster It may incorrect
+
+😁 പ്രൊ ടിപ്സ് : ചോദിച്ച മൂവി ഫയൽ കാണുന്നില്ല എങ്കിൽ അടുത്ത പേജിൽ നോക്കുക. 😅ആ... പിന്നെ പോസ്റ്ററിൽ നോക്കി സിനിമ ഇല്ല എന്ന് വിജാരിക്കരുത് ചിലപ്പോൾ അടുത്ത പേജിൽ ഉണ്ടാകും സിനിമ.</s>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
