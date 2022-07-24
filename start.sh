@@ -1,5 +1,5 @@
 echo "Cloning Repo, Please Wait..."
-git clone -b main https://github.com/mastermindmayankofficial/moviebot.git /moviebot
+git clone -b main https://github.com/Jishnu021/moviebot.git/moviebot
 cd /moviebot
 echo "Installing Requirements..."
 pip3 install -U -r requirements.txt
